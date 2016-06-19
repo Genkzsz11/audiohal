@@ -138,6 +138,9 @@ endif
 
 LOCAL_SRC_FILES:= ssr.c \
                   device_utils.c
+ifeq ($(QCPATH),)
+     LOCAL_CFLAGS += -D_OSS
+endif
 
 LOCAL_CFLAGS += \
     -Wall \
